@@ -40,7 +40,9 @@ class BrandController extends Controller
      */
     public function create()
     {
-        return view('admin.brands.create');
+        $brands = $this->brandRepo->createBrand($request->all());
+        return view('admin.brands.create')
+            ->with('brands', $brands);
     }
 
     /**
