@@ -12,6 +12,7 @@
                         <label for="customer">Customers </label>
                         <select name="customer" id="status" class="form-control select2">
                             @foreach($customers as $customer)
+                                <option value="">--Select Customer--</option>
                                 <option value="{{ $customer->id }}">{{ $customer->name }}</option>
                             @endforeach
                         </select>
